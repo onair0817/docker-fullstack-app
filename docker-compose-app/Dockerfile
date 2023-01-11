@@ -1,8 +1,7 @@
-FROM node:10
+FROM node
 
 WORKDIR /usr/src/app
 
-# 로컬 파일들 전체 복사
 COPY ./ ./
 
 RUN npm install
