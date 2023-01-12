@@ -22,7 +22,6 @@ services:
       - CHOKIDAR_USEPOLLING=true
   # 서비스이름
   tests:
-    stdin_open: true
     # 현 디렉터리에 있는 Dockerfile 사용
     build:
       # 도커 이미지를 구성하기 위한 파일들이 있는 위치
@@ -35,3 +34,4 @@ services:
       - ./:/usr/src/app
     #  테스트 컨테이너가 시작될 때 실행되는 명령어
     command: [ "npm", "run", "test" ]
+    stdin_open: true
